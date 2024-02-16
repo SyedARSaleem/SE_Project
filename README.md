@@ -1,4 +1,6 @@
 # SE_Project
-| Software Engineering Module |
+| Module: Software Engineering |
 | Group Name: "3,5 Brain Cells Left" |
-| Members: Adnan, Rafey, Jakhongir, Anas |
+| Poduct Owner: Rafey |
+| Scrum Master: Adnan |
+| Other Members: Jakhongir, Anas |
