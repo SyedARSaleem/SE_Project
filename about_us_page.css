@@ -1,0 +1,432 @@
+#members{
+    background-color: black;
+    border-radius: 10px;
+    color: antiquewhite;
+    height: 800px;
+    width: auto;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.eachmembers{
+    background-color: rgb(23, 16, 53);
+    border-radius: 10px;
+    color: antiquewhite;
+    height: 570px;
+    width: auto;
+    display: flex;
+    gap: 100px;
+    padding-top: 40px;
+    padding-left: 28px;
+    
+    
+}
+.Adnan{
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1),rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius:50px 20px;
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    width: auto;
+    margin-left: 10px;
+    padding-right: 10px;
+    height: 400px;
+    
+    
+}
+.Anas{
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1),rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius:50px 20px;
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    width: auto;
+    margin-left: 10px;
+    padding-right: 10px;
+    height: 400px;
+    display: flex;
+}
+.Jakhongir{
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1),rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius:50px 20px;
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    width: auto;
+    margin-left: 10px;
+    padding-right: 10px;
+    height: 400px;
+    display: flex;
+}
+
+.Rafey{
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1),rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px 20px;
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    width: auto;
+    margin-left: 10px;
+    padding-right: 0px;
+    
+    
+    height: 400px;
+    display: flex;
+}
+.images{
+    max-height: 300px;
+    width: auto;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-left: 46px;
+    display: flex;
+    border: 10px;
+    border-radius:50px 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+@font-face{
+    font-family: heading_font;
+    src:url(GROBOLD.ttf);
+}
+@font-face{
+    font-family: socials;
+    src: url(SpongeboyMeBob.ttf);
+}
+@font-face {
+    font-family: names;
+    src: url(Raosand.ttf);
+}
+.main_heading{
+    font-family: heading_font;
+}
+
+.Adnan::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+
+}
+.Adnan:hover .images{
+    filter: grayscale(1)  brightness(0.4);
+}
+.Adnan:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+.Adnan:hover .details h2 {
+    scale: 1;
+    opacity: 1;
+
+}
+.Adnan:hover .details p {
+    opacity: 1;
+    transform: translateY(0);
+}
+.details{
+    width: 80%;
+    position: absolute;
+    top: 40% ;
+    left: 57%;
+    transform: translate(-50%, -50%) scale(.9);
+    text-align: center;
+}
+.details h2,.details p{
+    opacity: 0;
+    transition: 0.4s 0.2s ease;
+
+}
+.details p{
+    font-size: 14px;
+    line-height: 2.0;
+    
+    transform: translateY(50%);
+    text-align:justify;
+    
+    
+}
+.details h2{
+   text-align: start;
+    scale: .7;
+    
+
+
+
+}
+.Anas::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+
+}
+.Anas:hover .images{
+    filter: grayscale(1)  brightness(0.4);
+}
+.Anas:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+.Anas:hover .details h2 {
+    scale: 1;
+    opacity: 1;
+
+}
+.Anas:hover .details p {
+    opacity: 1;
+    transform: translateY(0);
+}
+.Jakhongir::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+
+}
+.Jakhongir:hover .images{
+    filter: grayscale(1)  brightness(0.4);
+}
+.Jakhongir:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+.Jakhongir:hover .details h2 {
+    scale: 1;
+    opacity: 1;
+
+}
+.Jakhongir:hover .details p {
+    opacity: 1;
+    transform: translateY(0);
+}
+.Rafey::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+
+}
+.Rafey:hover .images{
+    filter: grayscale(1)  brightness(0.4);
+}
+.Rafey:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+.Rafey:hover .details h2 {
+    scale: 1;
+    opacity: 1;
+
+}
+.Rafey:hover .details p {
+    opacity: 1;
+    transform: translateY(0);
+}
+.adnancontacts {
+    
+    position: absolute;
+    bottom: 70px;
+    left: 90px;
+    width: 150px;
+   height: 90px;
+    padding: 10;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1),rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30% 30% 80% 80%;
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+  }
+  .adnancontacts .logo{
+    height: 25px;
+    position: absolute;
+    width: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    bottom: 9%;
+    left: 20%;
+    
+    
+  }
+  .adnancontacts .gitlogo{
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    left: 45%;
+    bottom: 0.1em;
+    
+    
+  }
+  .anascontacts {
+    
+    position: absolute;
+    bottom: 70px;
+    left: 480px;
+    width: 150px;
+   height: 90px;
+    padding: 10;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1),rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30% 30% 80% 80%;
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+  }
+  .anascontacts .logo{
+    height: 25px;
+    position: absolute;
+    width: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    bottom: 9%;
+    left: 20%;
+    
+    
+  }
+  .anascontacts .gitlogo{
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    left: 45%;
+    bottom: 0.1em;
+    
+    
+  }
+
+  .jakhcontacts {
+    
+    position: absolute;
+    bottom: 70px;
+    left: 850px;
+    width: 150px;
+   height: 90px;
+    padding: 10;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1),rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30% 30% 80% 80%;
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+  }
+  .jakhcontacts .logo{
+    height: 25px;
+    position: absolute;
+    width: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    bottom: 9%;
+    left: 20%;
+    
+    
+  }
+  .jakhcontacts .gitlogo{
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    left: 45%;
+    bottom: 0.1em;
+    
+    
+  }
+  .rafeycontacts {
+    
+    position: absolute;
+    bottom: 70px;
+    left: 1235px;
+    width: 150px;
+   height: 90px;
+    padding: 10;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1),rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30% 30% 80% 80%;
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+  }
+  .rafeycontacts .logo{
+    height: 25px;
+    position: absolute;
+    width: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    bottom: 9%;
+    left: 20%;
+    
+    
+  }
+  .rafeycontacts .gitlogo{
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    left: 45%;
+    bottom: 0.1em;
+    
+    
+  }
+  .head{
+    font-family: socials;
+  }
+h2{
+    font-family: names;
+}
+p{
+    font-family: names;
+}
