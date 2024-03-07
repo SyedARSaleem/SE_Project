@@ -1,0 +1,11 @@
+As a user, I want the application to have security measures, requiring login credentials (username and password), ensuring secure access and modification of sensitive data.
+In order to update and increase the amount of data that is accessible for further research, I, as a user, wish to add new information (dataset) to the database.
+In order to make informed decisions, I, as a user, want to be able to examine and analyse population reports that include the name of the continent, area, or nation, the total population, the total population living in cities (together with a percentage), and the total population not living in cities (along with a percentage).
+As a user, I want to produce reports for every continent, region, and nation using columns like Code, Name, Continent, Region, and Population.
+In order to effectively analyse and compare demographic data, as a user I want access to population statistics for continents, regions, and nations, including the total population, the population living in cities (with percentage), and the population not living in cities (with percentage).
+As a user, I would want to see a list of all capital cities worldwide, by continent, and by region, arranged from greatest to smallest population.
+I want to be able to quickly access a dashboard that offers a summary of important performance indicators and up-to-date information on company operations as a company Operations Manager when I log in.
+I want to work with my team members as a Business Operations Manager as smoothly as possible by providing a centralised platform for job delegation, document exchange, and communication.
+As a business operations manager, I aim to reduce manual involvement, minimise mistake risk, and streamline complicated processes through the use of workflow automation.
+Using the integrated calendar and task management tool, I wish to effectively manage my schedule and prioritise my responsibilities as a Business Operations Manager.
+As a Business Operations Manager, I want to be able to readily modify fields, processes, and reports in the application to meet evolving business needs.
