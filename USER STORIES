@@ -1,9 +1,9 @@
-As a user, I want the application to have security measures, requiring login credentials (username and password), ensuring secure access and modification of sensitive data.
-In order to update and increase the amount of data that is accessible for further research, I, as a user, wish to add new information (dataset) to the database.
-In order to make informed decisions, I, as a user, want to be able to examine and analyse population reports that include the name of the continent, area, or nation, the total population, the total population living in cities (together with a percentage), and the total population not living in cities (along with a percentage).
-As a user, I want to produce reports for every continent, region, and nation using columns like Code, Name, Continent, Region, and Population.
-In order to effectively analyse and compare demographic data, as a user I want access to population statistics for continents, regions, and nations, including the total population, the population living in cities (with percentage), and the population not living in cities (with percentage).
-As a user, I would want to see a list of all capital cities worldwide, by continent, and by region, arranged from greatest to smallest population.
+As a demographer, I want a demographic tool that efficiently generates detailed population reports, enabling me to extract meaningful insights for informed decision-making.
+In order to ensure that the tool offers in-depth research of birth rates, death rates, migration patterns, and other pertinent data, as a demographer I want to be able to identify trends and patterns in population demographics.
+As a demographer, I want the tool to provide a user-friendly interface, allowing me to easily navigate and customize reports to suit my specific research needs and focus areas.
+As a demographer, I require customization options within the tool. I want control over parameters and filters, enabling me to tailor reports to specific research questions and demographic aspects.
+As a demographer, my goal is to find a tool that complements my knowledge in demography and offers sophisticated capabilities that address the unique requirements of examining changes in gender and demographics in developing nations.
+As a Business Operations Manager, I want to receive a weekly summary report highlighting key achievements, challenges, and suggested areas for improvement within the business operations.
 I want to be able to quickly access a dashboard that offers a summary of important performance indicators and up-to-date information on company operations as a company Operations Manager when I log in.
 I want to work with my team members as a Business Operations Manager as smoothly as possible by providing a centralised platform for job delegation, document exchange, and communication.
 As a business operations manager, I aim to reduce manual involvement, minimise mistake risk, and streamline complicated processes through the use of workflow automation.
