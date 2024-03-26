@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: black;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.sidebar {
+    position: absolute;
+    width:60px;
+    height:max-content;
+    background: white;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px ;
+    
+   
+}
+
+.sidebar:hover {
+    width: 300px;
+}
+
+.sidebar ul {
+    position: relative;
+    height: calc(100vh - 50px);
+    padding: 10px 0;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li:hover {
+    background: #f3f3f3;
+}
+
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar ul li a .icon,
+.sidebar ul li.logo .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.sidebar ul li a .text,
+.sidebar ul li.logo .text {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sidebar ul li.logo {
+    margin-bottom: 50px;
+}
+
+.sidebar ul li.logo .icon {
+    font-size: 2em;
+}
+
+.sidebar ul li.logo .text {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.sidebar ul li.logo:hover {
+    background: #fff;
+}
+
+.header {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    background: black;
+    height: 100px;
+    border-radius: 10px;
+    
+}
+
+.header .log_sign {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    align-items: center;
+}
+
+.header .log_sign button {
+    margin-left: 20px;
+    white-space: nowrap;
+    text-decoration: none;
+    height: 30px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-family: fantasy;
+}
+
+.header .log_sign button:hover {
+    background-color: #555;
+}
+
+.main_body {
+    text-align: center; 
+    padding: 20px;
+    color: #fff;
+    position: relative; 
+}
+
+.heading {
+    font-family:fantasy;
+    
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #c9c6d6 0%,
+        #120d17 29%,
+        #fbfdfb 67%,
+        #121211 100%
+      );
+      background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    animation: gradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+      font-size: 90px;
+}
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom ul {
+    padding: 0;
+    margin: 0;
+}
+
+.bottom ul li {
+    list-style: none;
+}
+
+.bottom ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.bottom ul li a .icon {
+    margin-right: 10px;
+}
+
+.bottom ul li a:hover {
+    background: #f3f3f3;
+}
+.main_body
+{
+    top: 350px;
+    right: 20px;
+    
+}
+.generate-report-link {
+    display: block;
+    margin-top: 20px; 
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    font-family: fantasy;
+}
+
+.generate-report-link:hover {
+    color: #ccc;
+}
+.home_heading
+{
+    color: white;
+    font-family: fantasy;
+}
