@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Generation</title>
+    <link rel="stylesheet" href="report_generation.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <header>
+     <div class="header_section">
+      
+        <div class="logo">
+            <i class="fa-solid fa-earth-americas"></i>
+            <h1>Globopedia</h1>
+            <h2>Report</h2> 
+            <h3>Generation</h3>
+        </div>
+          <style>
+              table {
+                  border-collapse: collapse;
+                  width: 100%;
+              }
+
+              th, td {
+                  border: 1px solid #dddddd;
+                  text-align: left;
+                  padding: 8px;
+              }
+
+              th {
+                  background-color: #f2f2f2;
+              }
+          </style>
+  </header>
+
+ <body>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href="#">
+                  <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                  <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="facts.html">
+                  <span class="icon"><ion-icon name="pie-chart-outline"></ion-icon></span>
+                  <span class="text">Facts</span>
+                </a>
+             <ul class="dropdown-content">
+              <li><a href="#">Language</a></li>
+              <li><a href="#">Population</a></li>
+             </ul>
+            </li>
+            <li class="dropdown2">
+                <a href="#">
+                  <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
+                  <span class="text">Report Generation</span>
+                </a>
+             <ul class="dropdown-content2">
+              <li><a href="#">Population</a></li>
+              <li><a href="#">City</a></li>
+              <li><a href="#">Country</a></li>
+              <li><a href="#">Capital City</a></li>
+             </ul>
+            </li>
+            <div class="bottom">
+                <li>
+                    <a href="about_us_page.html">
+                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <span class="text">About Us</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+    src="https://kit.fontawesome.com/cbc661c18f.js"
+    crossorigin="anonymous"
+    ></script>
+
+   <main>
+      <div class="report-generator">
+        <div class="mt-4">
+          <span>Top <input type="number" id="count_world" placeholder="Enter a number"> countries in the
+            <select id="reportType">
+              <option value="world" default selected>World</option>
+            </select>
+          </span>
+          <button id="generateButton" onclick={fetchCountriesByPopulationDescending_World()}>Generate </button>
+        </div>
+        <div class="mt-4">
+          <span>Top <input type="number" id="count_Continent" placeholder="Enter a number"> countries in the Continent
+            <input type="text" id="ContinentName" placeholder="Enter the Continent">
+            <button id="generateButton" onclick={fetchCountriesByPopulationDescending_Continent()}>Generate </button>
+          </span>
+        </div>
+        <div class="mt-4">
+          <span>Top <input type="number" id="count_Region" placeholder="Enter a number"> countries in the Region
+            <input type="text" id="RegionName" placeholder="Enter the Region">
+          </span>
+          <button id="generateButton" onclick={fetchCountriesByPopulationDescending_Region()}>Generate </button>
+        </div>
+      </div>
+   </main>
+
+ <div id="tableContainer"></div>
+
+  <footer>
+    <div class="footer">
+      <h2>Globopedia</h2>s
+      <ul class="ul_list">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-envelope icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-square-instagram icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-twitter icon"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="subscribe">
+        <a href="#">Subscribe</a> to our daily facts via email 
+      </p>
+      <div class="copyrights">
+        <p>Privacy Policy</p>
+        <p>Copyright @ 2024 | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+
+    function fetchCountriesByPopulationDescending_World() {
+      document.getElementById("tableContainer").innerHTML = "";
+      var count_world = document.getElementById("count_world").value;
+
+      fetch('http://localhost:1337/topcountries/'+ count_world)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data); // Output the data to console for testing purposes
+                  // You can process the data further here
+         // Create HTML table
+            var table = "<table>";
+            table += "<tr><th>Code</th><th>Name</th><th>Continent</th><th>Region</th><th>Surface Area</th><th>Indep Year</th><th>Population</th><th>Life Expectancy</th><th>GNP</th><th>GNP Old</th><th>Local Name</th><th>Government Form</th><th>Head of State</th><th>Capital</th><th>Code2</th></tr>";
+
+            // Populate table rows with data
+            data.forEach(function(country) {
+                table += "<tr>";
+                table += "<td>" + country.Code + "</td>";
+                table += "<td>" + country.Name + "</td>";
+                table += "<td>" + country.Continent + "</td>";
+                table += "<td>" + country.Region + "</td>";
+                table += "<td>" + country.SurfaceArea + "</td>";
+                table += "<td>" + country.IndepYear + "</td>";
+                table += "<td>" + country.Population + "</td>";
+                table += "<td>" + country.LifeExpectancy + "</td>";
+                table += "<td>" + country.GNP + "</td>";
+                table += "<td>" + country.GNPOld + "</td>";
+                table += "<td>" + country.LocalName + "</td>";
+                table += "<td>" + country.GovernmentForm + "</td>";
+                table += "<td>" + country.HeadOfState + "</td>";
+                table += "<td>" + country.Capital + "</td>";
+                table += "<td>" + country.Code2 + "</td>";
+                table += "</tr>";
+            });
+
+            table += "</table>";
+
+            // Insert table into div with id "tableContainer"
+            document.getElementById("tableContainer").innerHTML = table;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function fetchCountriesByPopulationDescending_Continent() {
+      document.getElementById("tableContainer").innerHTML = "";
+      var count_Continent = document.getElementById("count_Continent").value;
+      var ContinentName = document.getElementById("ContinentName").value;
+
+      fetch('http://localhost:1337/topcountries/'+ContinentName+'/'+count_Continent)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data); // Output the data to console for testing purposes
+           // Create HTML table
+              var table = "<table>";
+              table += "<tr><th>Code</th><th>Name</th><th>Continent</th><th>Region</th><th>Surface Area</th><th>Indep Year</th><th>Population</th><th>Life Expectancy</th><th>GNP</th><th>GNP Old</th><th>Local Name</th><th>Government Form</th><th>Head of State</th><th>Capital</th><th>Code2</th></tr>";
+
+              // Populate table rows with data
+              data.forEach(function(country) {
+                  table += "<tr>";
+                  table += "<td>" + country.Code + "</td>";
+                  table += "<td>" + country.Name + "</td>";
+                  table += "<td>" + country.Continent + "</td>";
+                  table += "<td>" + country.Region + "</td>";
+                  table += "<td>" + country.SurfaceArea + "</td>";
+                  table += "<td>" + country.IndepYear + "</td>";
+                  table += "<td>" + country.Population + "</td>";
+                  table += "<td>" + country.LifeExpectancy + "</td>";
+                  table += "<td>" + country.GNP + "</td>";
+                  table += "<td>" + country.GNPOld + "</td>";
+                  table += "<td>" + country.LocalName + "</td>";
+                  table += "<td>" + country.GovernmentForm + "</td>";
+                  table += "<td>" + country.HeadOfState + "</td>";
+                  table += "<td>" + country.Capital + "</td>";
+                  table += "<td>" + country.Code2 + "</td>";
+                  table += "</tr>";
+              });
+
+              table += "</table>";
+
+              // Insert table into div with id "tableContainer"
+              document.getElementById("tableContainer").innerHTML = table;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function fetchCountriesByPopulationDescending_Region() {
+      document.getElementById("tableContainer").innerHTML = "";
+      var count_Region = document.getElementById("count_Region").value;
+      var RegionName = document.getElementById("RegionName").value;
+
+      fetch('http://localhost:1337/topcountriesinregion/'+RegionName+'/'+count_Region)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data); // Output the data to console for testing purposes
+           // Create HTML table
+              var table = "<table>";
+              table += "<tr><th>Code</th><th>Name</th><th>Continent</th><th>Region</th><th>Surface Area</th><th>Indep Year</th><th>Population</th><th>Life Expectancy</th><th>GNP</th><th>GNP Old</th><th>Local Name</th><th>Government Form</th><th>Head of State</th><th>Capital</th><th>Code2</th></tr>";
+
+              // Populate table rows with data
+              data.forEach(function(country) {
+                  table += "<tr>";
+                  table += "<td>" + country.Code + "</td>";
+                  table += "<td>" + country.Name + "</td>";
+                  table += "<td>" + country.Continent + "</td>";
+                  table += "<td>" + country.Region + "</td>";
+                  table += "<td>" + country.SurfaceArea + "</td>";
+                  table += "<td>" + country.IndepYear + "</td>";
+                  table += "<td>" + country.Population + "</td>";
+                  table += "<td>" + country.LifeExpectancy + "</td>";
+                  table += "<td>" + country.GNP + "</td>";
+                  table += "<td>" + country.GNPOld + "</td>";
+                  table += "<td>" + country.LocalName + "</td>";
+                  table += "<td>" + country.GovernmentForm + "</td>";
+                  table += "<td>" + country.HeadOfState + "</td>";
+                  table += "<td>" + country.Capital + "</td>";
+                  table += "<td>" + country.Code2 + "</td>";
+                  table += "</tr>";
+              });
+
+              table += "</table>";
+
+              // Insert table into div with id "tableContainer"
+              document.getElementById("tableContainer").innerHTML = table;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+  </script>
+ </body>
+</html>

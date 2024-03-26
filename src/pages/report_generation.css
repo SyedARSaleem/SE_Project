@@ -1,0 +1,222 @@
+* {
+    font-family:'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+/**************************** Header section ****************************/
+header{
+    background-color: rgb(8, 47, 80);
+} 
+.header_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    padding: 15px;
+}
+.header_section h1{
+    color: rgb(170, 190, 207);
+    font-size: 1.9rem;
+    padding-left: 15px;
+}
+.header_section h2{
+    color: rgb(170, 190, 207);
+    font-size: 1.9rem;
+    padding-left: 430px;
+}
+.header_section h3{
+    color: rgb(170, 190, 207);
+    font-size: 1.9rem;
+    padding-left: 10px;
+}
+.header_section .fa-earth-americas{
+    font-size: 3rem;
+    color: rgb(170, 190, 207);
+}
+.header_section .fa-user{
+    font-size: 1.6rem;
+    color: rgb(170, 190, 207);
+}
+.logo{
+    display: flex;
+    width: 6%;
+    align-items: center;
+}
+
+/**--------------------- Body ---------------**/
+
+body{
+    margin: 0px;
+    background-color:white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;   
+}
+main{
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(189, 202, 212);
+}
+
+.sidebar {
+    position: absolute;
+    width:60px;
+    height:762px;
+    background-color: rgb(164, 184, 202);
+    overflow: hidden;
+    transition: 0.5s;
+    
+   
+}
+
+.sidebar:hover {
+    width: 300px;
+    height: 762px; 
+}
+
+
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li:hover {
+    background: rgb(123, 162, 197);
+}
+
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar ul li a .icon,
+.sidebar ul li.logo .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.sidebar ul li a .text,
+.sidebar ul li.logo .text {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sidebar ul li.logo {
+    margin-bottom: 50px;
+}
+
+.sidebar ul li.logo .icon {
+    font-size: 2em;
+}
+
+.sidebar ul li.logo .text {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.sidebar ul li.logo:hover {
+    background: #fff;
+}
+
+.containers{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-gap: 40px;
+    justify-content: center;
+    
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(189, 202, 212);
+  }
+  
+  .report-generator {
+    margin: auto; /* Center the report generator */
+    margin-top: 150px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .report-generator h2 {
+    margin-bottom: 15px;
+    color: rgb(8, 47, 80);
+  }
+  
+  .report-generator input[type="number"],
+  .report-generator select {
+    padding: 5px;
+    margin-right: 10px;
+    color: rgb(8, 47, 80);
+    background-color: #fff;
+  }
+  
+  .report-generator button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(8, 47, 80);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/**************************** Footer section ****************************/
+.footer{
+    background-color: rgb(8, 47, 80);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+h2{
+    padding-top: 2%;
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(170, 190, 207);
+}
+.ul_list{
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.ul_list li i{
+    color: rgb(170, 190, 207);
+    font-size: 2rem;
+    padding: 12px 12px;
+    border: 2px solid rgb(170, 190, 207);
+    border-radius: 50px;
+    
+}
+.subscribe{
+    padding-top: 1rem;
+    color: rgb(170, 190, 207);
+    font-size: 1.1rem;
+}
+.subscribe a{
+    color: rgb(170, 190, 207);
+   
+}
+.copyrights{
+    padding-top: 30px;
+    text-align: center;
+    color: rgb(170, 190, 207);
+}
