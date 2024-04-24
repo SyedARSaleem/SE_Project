@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Webpage's title -->
+  <title>About Us</title>
+  <!-- The link to CSS file-->
+  <link rel="stylesheet" href="about_us.css" />
+  <!-- The link to Font Awesome -->
+  <script src="https://kit.fontawesome.com/cbc661c18f.js" crossorigin="anonymous"></script>
+  <!-- The link to JS file that runs "Subscription" form -->
+  <script src="subscribe.js"></script>
+
+</head>
+<body>
+<header>
+  <!-- The header section with logo and "Globopedia" text -->
+  <div class="header_section">
+    <div class="logo">
+      <i class="fa-solid fa-earth-americas"></i>
+      <h1>Globopedia</h1>
+    </div>
+  </div>
+</header>
+<main>
+  <!-- Sidebar settings -->
+  <div class="sidebar">
+    <ul>
+      <li class="logo">
+        <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+        <span class="text">Navigation</span>
+      </li>
+      <!-- Sidebar's navigation links -->
+      <li>
+        <a href="home.html">
+        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+        <span class="text">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="facts.html">
+        <span class="icon"><ion-icon name="pie-chart-outline"></ion-icon></span>
+        <span class="text">Facts</span>
+        </a>
+      </li>
+      <li>
+        <a href="report_generation.html">
+         <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
+         <span class="text">Reports</span>
+        </a>
+      </li>
+      <li class="about_us">
+        <a href="about_us.html">
+        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+        <span class="text">About Us</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- The section where all information about creators is appeared-->
+  <div id="members"><h1 class="main_heading">About Us</h1>
+    <div class="eachmembers">
+        <div class="Adnan">
+            <div class="image_box"><img src="images/adnan.jpg" alt="Adnan" class="images"></div>
+            <div class="details"> 
+              <h2>Adnan</h2>
+              <p>Role: Scrum Master <br>Age: 21 <br>Skilled in: C, C++, C#, python <br>Experience Level: Beginner </p>
+            </div>
+        </div>
+        <div class="Anas">
+            <div class="image_box"><img src="images/anas.jpg" alt="Anas" class="images"></div>
+            <div class="details"> 
+              <h2>Anas</h2>
+              <p>Role: Back-End Developer <br>Age: 21 <br>Skilled in: C, C++, C#, python <br>Experience Level: Beginner </p>
+            </div>
+        </div>
+        <div class="Jakhongir">
+            <div class="image_box"><img src="images/jakhongir.jpg" alt="Jakhongir" class="images"></div>
+            <div class="details"> 
+              <h2>Jakh</h2>
+              <p>Role: Front-End Developer  <br>Age: 21 <br>Skilled in: C, C++, C#, python <br>Experience Level: Beginner </p>
+            </div>
+        </div>
+        <div class="Rafey"> 
+            <div class="image_box"><img src="images/rafey.jpg" alt="Rafey" class="images"></div><div class="details"> 
+              <h2>Rafey</h2>
+              <p>Role: Product Owner <br>Age: 22 <br>Skilled in: C, C++, C#, python <br>Experience Level: Beginner </p>
+            </div>
+        </div>
+        <!-- Social media links of each creator -->
+        <div class="adnancontacts"> <p class="head">Socials</p><a href="https://www.instagram.com/adnan_171_/"> <img src="images/instagram.jpg" class="logo"></a> <a href="https://github.com/stealth1710"><img class="gitlogo" src="images/github.jpg" ></a></div>
+        <div class="anascontacts"> <p class="head">Socials</p><a href="https://www.instagram.com/anas_kp___/"> <img src="images/instagram.jpg" class="logo"></a> <a href="https://github.com/kiliyamm"><img class="gitlogo" src="images/github.jpg" ></a></div>
+        <div class="jakhcontacts"> <p class="head">Socials</p><a href="https://www.instagram.com/brilliance2002/"> <img src="images/instagram.jpg" class="logo"></a> <a href="https://github.com/Brilliance2002"><img class="gitlogo" src="images/github.jpg" ></a></div>
+        <div class="rafeycontacts"> <p class="head">Socials</p><a href="https://www.instagram.com/syed_waitforit_saleem/"> <img src="images/instagram.jpg" class="logo"></a> <a href="https://github.com/SyedARSaleem"><img class="gitlogo" src="images/github.jpg" ></a></div>
+    </div>
+  </div>
+</main>
+</body>
+<!-- Footer section -->
+  <footer>
+    <div class="footer">
+      <h2>Globopedia</h2>
+      <ul class="ul_list">
+        <!-- "Contact Us" links -->
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-envelope icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-square-instagram icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-linkedin icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-brands fa-twitter icon"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- Subscription link to daily facts -->
+      <p class="subscribe">
+        <a href="#" id="subscribeButton">SUBSCRIBE</a> to our daily facts via email
+      </p>
+      <!-- Subscription pop-up form -->
+      <div id="popupForm">
+        <form id="subscriptionForm">
+           <label for="email">Email:</label>
+           <input type="email" id="email" placeholder="Enter your email here" name="email" required>
+           <input type="submit" value="Subscribe">
+        </form>
+        <!-- Exit button -->
+        <button id="closeButton">X</button>
+      </div>
+      <!-- Overlay (hidden by default) -->
+      <div id="overlay"></div>
+      <!-- Copyright section -->
+      <div class="copyrights">
+      <p>Privacy Policy</p>
+      <p>Copyright @ 2024 | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Script tags that are responsible for loading the Ionicons library (icons) -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
