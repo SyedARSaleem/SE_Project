@@ -1,104 +1,120 @@
-* {
-    font-family:'Trebuchet MS', sans-serif;
+/* Reset default styles for all elements,
+   using 'Trebuchet MS' as the default font family,
+   with sans-serif fallback. */
+
+   * {
+    font-family: 'Trebuchet MS', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
+  
+  /* Ensure images don't exceed their container width,
+     and maintain their aspect ratio. */
+
   img {
     max-width: 100%;
     height: auto;
   }
-/**************************** Header section ****************************/
-header{
+  
+  /* Header section */
+
+  header {
     background-color: rgb(8, 47, 80);
-} 
-.header_section{
+  } 
+
+  .header_section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 98%;
     padding: 15px;
-}
-.header_section h1{
+  }
+
+  .header_section h1 {
     color: rgb(170, 190, 207);
     font-size: 1.9rem;
     padding-left: 15px;
-}
-.header_section h2{
-    color: rgb(170, 190, 207);
-    font-size: 1.9rem;
-    padding-left: 430px;
-}
-.header_section h3{
-    color: rgb(170, 190, 207);
-    font-size: 1.9rem;
-    padding-left: 10px;
-}
-.header_section .fa-earth-americas{
+  }
+
+  .header_section .fa-earth-americas {
     font-size: 3rem;
     color: rgb(170, 190, 207);
-}
-.header_section .fa-user{
+  }
+
+  .header_section .fa-user {
     font-size: 1.6rem;
     color: rgb(170, 190, 207);
-}
-.logo{
+  }
+
+  .logo {
     display: flex;
     width: 6%;
     align-items: center;
-}
+  }
 
-/**--------------------- Body ---------------**/
+  /* Body section */
 
-body{
+  body {
     margin: 0px;
     background-color:white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;   
-}
-main{
+  }
+
+  main {
     display: flex;
     min-height: 100vh;
     background-color: rgb(189, 202, 212);
-}
+  }
 
-.sidebar {
+  /* Sidebar section*/
+
+  .sidebar {
     position: absolute;
     width:60px;
-    height:762px;
-    background-color: rgb(164, 184, 202);
+    height:763px;
+    background: rgb(164, 184, 202);
     overflow: hidden;
     transition: 0.5s;
     
-   
-}
+  }
 
-.sidebar:hover {
+  .sidebar:hover {
     width: 300px;
-    height: 762px; 
-}
+  }
 
+  .sidebar ul {
+    position: relative;
+    height: calc(100vh - 50px);
+    padding: 10px 0;
+  }
 
-
-.sidebar ul li {
+  .sidebar ul li {
     list-style: none;
-}
+  }
 
-.sidebar ul li:hover {
-    background: rgb(123, 162, 197);
-}
+  .sidebar ul li:hover {
+    background: #f3f3f3;
+  }
 
-.sidebar ul li a {
+  .sidebar ul li a {
     position: relative;
     display: flex;
     white-space: nowrap;
     text-decoration: none;
-}
+  }
 
-.sidebar ul li a .icon,
-.sidebar ul li.logo .icon {
+  /* Adjust margin-top to position the "About Us" bar lower */
+
+  .sidebar ul li.about_us {
+    margin-top: 405px; 
+  }
+
+  .sidebar ul li a .icon,
+  .sidebar ul li.logo .icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,10 +122,10 @@ main{
     height: 60px;
     font-size: 1.5em;
     color: #333;
-}
+  }
 
-.sidebar ul li a .text,
-.sidebar ul li.logo .text {
+  .sidebar ul li a .text,
+  .sidebar ul li.logo .text {
     height: 60px;
     display: flex;
     align-items: center;
@@ -117,54 +133,60 @@ main{
     color: #333;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-}
+  }
 
-.sidebar ul li.logo {
+  .sidebar ul li.logo {
     margin-bottom: 50px;
-}
+  }
 
-.sidebar ul li.logo .icon {
+  .sidebar ul li.logo .icon {
     font-size: 2em;
-}
+  }
 
-.sidebar ul li.logo .text {
+  .sidebar ul li.logo .text {
     font-size: 1.2em;
     font-weight: 600;
-}
+  }
 
-.sidebar ul li.logo:hover {
-    background: #fff;
-}
+  /* Set background to transparent */
 
-.containers{
+  .sidebar ul li.logo:hover,
+  .sidebar ul li.logo:hover > a {
+    background: transparent; 
+  }
+
+  /* Container styles */
+
+  .containers {
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     grid-gap: 40px;
     justify-content: center;
-    
-}
-
-main {
-    display: flex;
-    min-height: 100vh;
-    background-color: rgb(189, 202, 212);
   }
-  
+
+  /* Main Content (Report Generator styles */
+
   .report-generator {
-    margin: auto; /* Center the report generator */
-    margin-top: 150px;
+    margin: auto; 
+    margin-top: 15px;
     text-align: center;
     padding: 10px;
   }
   
-  .report-generator h2 {
-    margin-bottom: 15px;
+  .report-generator h1 {
+    text-align: center;
+    margin-top: 40px;
     color: rgb(8, 47, 80);
   }
   
+  /* Styles for input field and options to choose sectors */
+  
   .report-generator input[type="number"],
-  .report-generator select {
+  .report-generator select,
+  .report-generator input[type="text"] {
+    font-size: 15px;
     padding: 5px;
+    margin-top: 100px;
     margin-right: 10px;
     color: rgb(8, 47, 80);
     background-color: #fff;
@@ -177,46 +199,140 @@ main {
     color: #fff;
     border: none;
     cursor: pointer;
-}
-/**************************** Footer section ****************************/
-.footer{
+  }
+  
+
+  /* Footer section */
+
+  .footer {
     background-color: rgb(8, 47, 80);
     display: flex;
     flex-direction: column;
     gap: 25px;
     align-items: center;
-}
-h2{
+  }
+
+  /* Styles for h2 elements */
+
+  h2 {
     padding-top: 2%;
     font-size: 3rem;
     text-align: center;
     color: rgb(170, 190, 207);
-}
-.ul_list{
+  }
+  
+  /* Styles for unordered lists */
+
+  .ul_list {
     display: flex;
     width: 40%;
     justify-content: space-evenly;
     list-style: none;
-}
-.ul_list li i{
+  }
+  
+  /* Styles for icons inside list items */
+
+  .ul_list li i {
     color: rgb(170, 190, 207);
     font-size: 2rem;
     padding: 12px 12px;
     border: 2px solid rgb(170, 190, 207);
     border-radius: 50px;
-    
-}
-.subscribe{
+  }
+  
+  /* Styles for subscribe paragraph */
+  
+  .subscribe {
     padding-top: 1rem;
     color: rgb(170, 190, 207);
     font-size: 1.1rem;
-}
-.subscribe a{
+  }
+  
+  /* Styles for subscribe links */
+
+  .subscribe a {
     color: rgb(170, 190, 207);
-   
-}
-.copyrights{
+  }
+  
+  /* Styles for the pop-up form and overlay */
+
+  #popupForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(189, 202, 212);
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 600px;
+    height: 200px;
+  }
+  
+  /* Styles for the subscription form */
+
+  #subscriptionForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Styles for the submit button in the subscription form */
+
+  #subscriptionForm input[type="submit"] {
+    margin-top: 30px;
+    width: 80px;
+    height: 30px;
+  }
+  
+  /* Styles for the email input field in the subscription form */
+
+  #subscriptionForm input[type="email"] {
+    margin-top: 30px;
+    width: 300px;
+    height: 30px;
+  }
+  
+  /* Styles for the close button of the subscription pop-up */
+
+  #closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Styles for the overlay background */
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  /* Styles for the copyright section */
+
+  .copyrights {
     padding-top: 30px;
     text-align: center;
     color: rgb(170, 190, 207);
-}
+  }
+  
+  /* Styles for the bottom positioning */
+
+  .bottom {
+    bottom: 0;
+    position: absolute;
+    width: auto;
+  }
+  
