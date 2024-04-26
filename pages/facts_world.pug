@@ -1,0 +1,123 @@
+doctype html
+html(lang="en")
+  head
+    // Meta tags
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    // Webpage's title
+    title World Facts
+    // The link to CSS file
+    link(rel="stylesheet", href="facts.css")
+    // The link to Font Awesome
+    script(src="https://kit.fontawesome.com/cbc661c18f.js", crossorigin="anonymous")
+    // The link to JS file that runs "Subscription" form
+    script(src="subscribe.js")
+    // The link to JS file that runs "Dropdown" form
+    script(src="facts.js")
+  body
+    // The header section with logo and "Globopedia" text
+    header
+      div.header_section
+        div.logo
+          i.fa-solid.fa-earth-americas
+          h1 Globopedia
+    main
+      // Sidebar settings
+      div.sidebar
+        ul
+          li.logo
+            span.icon
+              ion-icon(name="list-outline")
+            span.text Navigation
+          li
+            // Sidebar's navigation links
+            a(href="/home")
+              span.icon
+                ion-icon(name="home-outline")
+              span.text Home
+          li
+            a(href="/facts_world")
+              span.icon
+                ion-icon(name="pie-chart-outline")
+              span.text Facts
+          li
+            a(href="/report_generation1")
+              span.icon
+                ion-icon(name="stats-chart-outline")
+              span.text Reports
+          li.about_us
+            a(href="/about_us")
+              span.icon
+                ion-icon(name="person-circle-outline")
+              span.text About Us
+      // The section where all main data about this page is appeared
+      div.population_facts
+        h1 Population Facts
+        div.containers
+          // Facts section (4 facts at most)
+          div.fact
+            img(src="images/population_growth.jpg")
+            div.fact_content
+              p.fact_number.p The world's population is growing by 1.10 percent per year.
+          div.fact
+            img(src="images/urban.jpg")
+            div.fact_content
+              p.fact_number.p More than half of the global population is urban.
+          div.fact
+            img(src="images/young.jpeg")
+            div.fact_content
+              p.fact_number.p The last decade has seen more young people in the world than ever before.
+          div.fact
+            img(src="images/males_females.jpg")
+            div.fact_content
+              p.fact_number.p 50.4 percent of the world’s population is male and 49.6 percent is female.
+        // Settings for dropdown and its options
+        div.facts_form
+          label(for="facts") Population facts for:
+          select(name="facts", id="facts")
+            option(value="World") World
+            option(value="Continent") Continent
+            option(value="Country") Country
+            option(value="City") City
+        // Diplay button settings connected with JS sheet
+        div.display_button
+          button#displayButton
+            a#displayLink(href="#") Display Facts
+  // Footer section
+  footer
+    div.footer
+      h2 Globopedia
+      ul.ul_list
+        // "Contact Us" links
+        li
+          a(href="#")
+            i.fa-solid.fa-envelope.icon
+        li
+          a(href="#")
+            i.fa-brands.fa-square-instagram.icon
+        li
+          a(href="#")
+            i.fa-brands.fa-linkedin.icon
+        li
+          a(href="#")
+            i.fa-brands.fa-twitter.icon
+      // Subscription link to daily facts
+      p.subscribe
+        a#subscribeButton(href="#") SUBSCRIBE to our daily facts via email
+      // Subscription pop-up form
+      div#popupForm
+        form#subscriptionForm
+          label(for="email") Email:
+          input(type="email", id="email", placeholder="Enter your email here", name="email", required)
+          input(type="submit", value="Subscribe")
+        // Exit button
+        button#closeButton X
+      // Overlay (hidden by default)
+      div#overlay
+      // Copyright section
+      div.copyrights
+        p Privacy Policy
+        p Copyright @ 2024 | All Rights Reserved
+  // Script tags that are responsible for loading the Ionicons library (icons)
+  script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
+  script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")

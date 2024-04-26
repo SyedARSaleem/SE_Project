@@ -1,0 +1,108 @@
+doctype html
+html(lang="en")
+  head
+    // Meta tags
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    // Webpage's title
+    title Home Page
+    // The link to CSS file
+    link(rel="stylesheet", href="home.css")
+    // The link to Font Awesome
+    script(src="https://kit.fontawesome.com/cbc661c18f.js", crossorigin="anonymous")
+    // The link to JS file
+    script(src="subscribe.js")
+  body
+    // The header section with logo and "Globopedia" text
+    header
+      .header_section
+        .logo
+          i.fa-solid.fa-earth-americas
+          h1 Globopedia
+        // Login authentication button with links
+        .sign_up_button
+          a(href="sign_up.html")
+            button.sign_up_button
+              i.fa-solid.fa-user
+              |  Sign Up
+    main
+      // Sidebar settings
+      .sidebar
+        ul
+          li.logo
+            span.icon
+              ion-icon(name="list-outline")
+            span.text Navigation
+          // Sidebar's navigation links
+          li
+            a(href="/home")
+              span.icon
+                ion-icon(name="home-outline")
+              span.text Home
+          li
+            a(href="/facts_world")
+              span.icon
+                ion-icon(name="pie-chart-outline")
+              span.text Facts
+          li
+            a(href="/report_generation1")
+              span.icon
+                ion-icon(name="stats-chart-outline")
+              span.text Reports
+          li.about_us
+            a(href="/about_us")
+              span.icon
+                ion-icon(name="person-circle-outline")
+              span.text About Us
+      // The main face of the page
+      .display_button
+        // Welcome text
+        h1 Welcome To Globopedia
+        p
+          | Welcome to our demography hub, your go-to destination for all things related to population data, reports,
+          | and intriguing facts about the world's demographics. Whether you're conducting academic research, planning
+          | a trip, or simply exploring for fun, we've got you covered! Got questions or suggestions? We value your
+          | feedback! Reach out to us via our "About Us" page, where you'll also find links to our social media channels.
+          | Join the conversation, share your thoughts, and connect with fellow enthusiasts as we dive into this
+          | demographic exploration together.
+        // Button that links this page with "Reports" page
+        button
+          a(href="/report_generation1") Generate Report
+    // Footer section
+    footer
+      .footer
+        h2 Globopedia
+        ul.ul_list
+          // "Contact Us" links
+          li
+            a(href="#")
+              i.fa-solid.fa-envelope.icon
+          li
+            a(href="#")
+              i.fa-brands.fa-square-instagram.icon
+          li
+            a(href="#")
+              i.fa-brands.fa-linkedin.icon
+          li
+            a(href="#")
+              i.fa-brands.fa-twitter.icon
+        // Subscription link to daily facts
+        p.subscribe
+          a(href="#" id="subscribeButton") SUBSCRIBE to our daily facts via email
+        // Subscription pop-up form
+        #popupForm
+          form#subscriptionForm
+            label(for="email") Email:
+            input(type="email", id="email", placeholder="Enter your email here", name="email", required)
+            input(type="submit", value="Subscribe")
+          // Exit button
+          button#closeButton X
+        // Overlay (hidden by default)
+        #overlay
+        // Copyright section
+        .copyrights
+          p Privacy Policy
+          p Copyright @ 2024 | All Rights Reserved
+  // Script tags that are responsible for loading the Ionicons library (icons)
+  script(type="module", src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
+  script(nomodule, src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")
