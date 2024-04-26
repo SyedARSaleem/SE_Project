@@ -31,22 +31,22 @@ html(lang='en')
             span.text Navigation
           li
             // Sidebar's navigation links
-            a(href='home.html')
+            a(href='/home')
               span.icon
                 ion-icon(name='home-outline')
               span.text Home
           li
-            a(href='facts_world.html')
+            a(href='/facts_world')
               span.icon
                 ion-icon(name='pie-chart-outline')
               span.text Facts
           li
-            a(href='report_generation1.html')
+            a(href='/report_generation1')
               span.icon
                 ion-icon(name='stats-chart-outline')
               span.text Reports
           li.about_us
-            a(href='about_us.html')
+            a(href='/about_us')
               span.icon
                 ion-icon(name='person-circle-outline')
               span.text About Us
@@ -61,6 +61,7 @@ html(lang='en')
           input(type='password', name='password', pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}', placeholder='Enter your password', title='Password must be at least 7 characters long and contain at least one number, one uppercase and lowercase letter.', required)
           h2 Password must be at least 7 characters long and contain at least one number, one uppercase and lowercase letter.
           button(type='submit') Login
+            a(href='/home')
           // Success Message Modal
           div#successModal.modal
             div.modal-content
@@ -69,7 +70,7 @@ html(lang='en')
                 span#successMessage.
           // Link to sign up page
           p A new user? 
-            a(href='sign_up.html') Sign up now
+            a(href='/sign_up') Sign up now
     // Footer section
     footer
       div.footer
