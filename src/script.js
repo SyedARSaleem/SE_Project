@@ -14,39 +14,39 @@ app.set('views', path.join(__dirname, 'src/pages'));
 
 // Define routes
 app.get('/login', (req, res) => {
-    res.render('login', { title: 'Login' }); // Renders views/index.pug
+    res.render('login', { title: 'Login' }); // Renders views/Login.pug
 });
 
 app.get('/home', (req, res) => {
-    res.render('home', { title: 'Home' }); // Renders views/index.pug
+    res.render('home', { title: 'Home' }); // Renders views/Home.pug
 });
 
 app.get('/about_us', (req, res) => {
-    res.render('about_us', { title: 'About Us' }); // Renders views/index.pug
+    res.render('about_us', { title: 'About Us' }); // Renders views/about_us.pug
 });
 
 app.get('/facts_city', (req, res) => {
-    res.render('facts_city', { title: 'City Facts' }); // Renders views/index.pug
+    res.render('facts_city', { title: 'City Facts' }); // Renders views/facts_city.pug
 });
 
 app.get('/facts_continent', (req, res) => {
-    res.render('facts_continent', { title: 'Continent Facts' }); // Renders views/index.pug
+    res.render('facts_continent', { title: 'Continent Facts' }); // Renders views/facts_continent.pug
 });
 
 app.get('/facts_country', (req, res) => {
-    res.render('facts_country', { title: 'Country Facts' }); // Renders views/index.pug
+    res.render('facts_country', { title: 'Country Facts' }); // Renders views/facts_country.pug
 });
 
 app.get('/facts_world', (req, res) => {
-    res.render('facts_world', { title: 'World Facts' }); // Renders views/index.pug
+    res.render('facts_world', { title: 'World Facts' }); // Renders views/facts_world.pug
 });
 
 app.get('/sign_up', (req, res) => {
-    res.render('sign_up', { title: 'Sign Up' }); // Renders views/index.pug
+    res.render('sign_up', { title: 'Sign Up' }); // Renders views/sign_up.pug
 });
 
 app.get('/report_generation1', (req, res) => {
-    res.render('report_generation1', { title: 'Reports' }); // Renders views/index.pug
+    res.render('report_generation1', { title: 'Reports' }); // Renders views/report_generation.pug
 });
 
 
